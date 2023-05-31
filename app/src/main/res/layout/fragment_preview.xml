@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".screen.preview.PreviewFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/iv_preview_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:strokeWidth="4dp"
+        app:strokeColor="?attr/colorOnPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="227dp"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/image_preview"
+            tools:src="@tools:sample/avatars"/>
+
+    </com.google.android.material.card.MaterialCardView>
+    
+    <ImageView
+        android:id="@+id/btn_cancel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/ic_cancel"
+        android:contentDescription="@string/cancel_button"
+        app:layout_constraintTop_toBottomOf="@id/iv_preview_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_accept"/>
+
+    <ImageView
+        android:id="@+id/btn_accept"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/ic_accept"
+        android:contentDescription="@string/accept_button"
+        app:layout_constraintTop_toBottomOf="@id/iv_preview_container"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">EcoScan</string>
+    <string name="welcome">Welcome!</string>
+    <string name="layout_image">Layout Image</string>
+    <string name="scan_button">Scan Button</string>
+    <string name="upload_image">Upload</string>
+    <string name="home">Home</string>
+    <string name="scan">Scan</string>
+    <string name="history">History</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="accept_button">Accept</string>
+    <string name="choose_a_picture">Choose a Picture</string>
+    <string name="back_button">Back Button</string>
+    <string name="take_photo_button">Take Photo</string>
+    <string name="switch_camera_button">Switch Camera</string>
+    <string name="failed_open_camera">Failed to Open Camera</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="success">Success</string>
+    <string name="error_take_photo">Error to Take Photo</string>
+    <string name="didnt_get_permission">Didn\'t Get Camera Permission</string>
+    <string name="cancel_camera">Cancel Camera</string>
+    <string name="question_first_dropdown">Is Electronic Device ?</string>
+    <string name="first_dropdown">Dropdown for Electronic Device</string>
+    <string name="question_second_dropdown">Location of Item at Home ?</string>
+    <string name="second_dropdown">Dropdown for Location of Item at Home</string>
+    <string name="question_third_dropdown">Item Name ?</string>
+    <string name="third_dropdown">Dropdown for Item Name</string>
+    <string name="question_fourth_dropdown">Item Type ?</string>
+    <string name="fourth_dropdown">Dropdown for Item Type</string>
+    <string name="submit">Submit</string>
+</resources>
