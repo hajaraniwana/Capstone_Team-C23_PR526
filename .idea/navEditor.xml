@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="aboutFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-40" />
+                            <option name="y" value="521" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="cameraFragment">
                     <value>
                       <LayoutPositions>
@@ -25,6 +37,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="detailFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="682" />
+                            <option name="y" value="-192" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -78,6 +102,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_previewFragment_to_detailFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_previewFragment_to_homeFragment">
                               <value>
                                 <LayoutPositions />

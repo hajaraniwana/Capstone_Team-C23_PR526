@@ -11,7 +11,7 @@
     <string name="cancel_button">Cancel</string>
     <string name="accept_button">Accept</string>
     <string name="choose_a_picture">Choose a Picture</string>
-    <string name="back_button">Back Button</string>
+    <string name="back">Back</string>
     <string name="take_photo_button">Take Photo</string>
     <string name="switch_camera_button">Switch Camera</string>
     <string name="failed_open_camera">Failed to Open Camera</string>
@@ -29,5 +29,21 @@
     <string name="third_dropdown">Dropdown for Item Name</string>
     <string name="question_fourth_dropdown">Item Type ?</string>
     <string name="fourth_dropdown">Dropdown for Item Type</string>
-    <string name="submit">Submit</string>
+    <string name="submit">SUBMIT</string>
+    <string name="power_consumption">Power Consumption</string>
+    <string name="production_impact">Production Impact</string>
+    <string name="disposal_impact">Disposal Impact</string>
+    <string name="consumption_impact">Consumption Impact</string>
+    <string name="watt">watt</string>
+    <string name="more_button">GET MORE INFO AND ALTERNATIVE</string>
+    <string name="about_us">About Us</string>
+    <string name="about_us_text">We are Team Zenith, which means the highest point in the sky or the highest achievement in preserving the environment.</string>
+    <string name="our_mission">Our Mission</string>
+    <string name="our_mission_text">We created this application with the aim of providing knowledge to the users so that they can learn some information about the electronic devices found in their homes.</string>
+    <string name="introduction">Introduction</string>
+    <string name="introduction_text_one">Based on the geographical conditions and natural resources of this country, as well as the challenges faced in preserving and conserving the environment, Indonesia, as the largest archipelago in the world, possesses incredibly rich biodiversity, with vast rainforests, high mountains, and diverse marine ecosystems.</string>
+    <string name="introduction_text_two">However, Indonesia also faces several significant environmental issues. One of them is massive deforestation. Activities such as illegal logging, forest clearance for agriculture and mining expansion, and uncontrolled forest fires have led to the loss of millions of hectares of forest every year. This not only has a negative impact on biodiversity but also contributes to global greenhouse gas emissions.</string>
+    <string name="introduction_text_three">Pollution is also a serious concern in Indonesia. Air pollution, particularly in urban areas such as Jakarta, Surabaya, and Bandung, has reached hazardous levels that pose risks to human health. Meanwhile, water pollution occurs in several rivers and lakes in Indonesia due to industrial waste, agricultural runoff, and unregulated chemical use.</string>
+    <string name="introduction_text_four">Climate change is also a significant issue in Indonesia. The country is vulnerable to threats such as rising sea levels, increased extreme temperatures, floods, and droughts. Small islands in Indonesia are at risk of submergence due to global warming and polar ice melting. Furthermore, climate change can also affect food production, water resources, and public health.</string>
+    <string name="our_team">Our Team</string>
 </resources>

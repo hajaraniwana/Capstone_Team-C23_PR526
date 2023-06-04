@@ -7,6 +7,12 @@
     android:background="?attr/colorPrimary"
     tools:context=".screen.preview.PreviewFragment">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        android:background="#4C000000"/>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/iv_preview_container"
         android:layout_width="wrap_content"
@@ -51,7 +57,21 @@
         app:layout_constraintStart_toEndOf="@id/btn_cancel"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <FrameLayout
+        android:id="@+id/progress_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:elevation="10dp"
+        android:visibility="gone">
 
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="?attr/colorOnPrimary"/>
+    </FrameLayout>
 
 
 

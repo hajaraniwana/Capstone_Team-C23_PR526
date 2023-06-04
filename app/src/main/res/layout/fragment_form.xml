@@ -14,6 +14,7 @@
         android:contentDescription="@string/layout_image"
         android:src="@drawable/form_img"
         android:layout_marginTop="24dp"
+        android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -37,6 +38,7 @@
         android:layout_height="48dp"
         android:background="@drawable/spinner_bg"
         android:spinnerMode="dropdown"
+        android:popupBackground="@color/white"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/first_dropdown"
@@ -61,6 +63,7 @@
         android:layout_height="48dp"
         android:background="@drawable/spinner_bg"
         android:spinnerMode="dropdown"
+        android:popupBackground="@color/white"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/second_dropdown"
@@ -85,6 +88,7 @@
         android:layout_height="48dp"
         android:background="@drawable/spinner_bg"
         android:spinnerMode="dropdown"
+        android:popupBackground="@color/white"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/third_dropdown"
@@ -109,17 +113,19 @@
         android:layout_height="48dp"
         android:background="@drawable/spinner_bg"
         android:spinnerMode="dropdown"
+        android:popupBackground="@color/white"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintStart_toStartOf="parent"
         android:contentDescription="@string/fourth_dropdown"
         app:layout_constraintTop_toBottomOf="@id/tv_fourthDropdown" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/myButton"
+        android:id="@+id/submitButton"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_marginTop="14dp"
         android:text="@string/submit"
+        android:alpha="0"
         android:textSize="16sp"
         android:textColor="@color/dark_blue"
         android:fontFamily="@font/poppins_font"
@@ -127,6 +133,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fourthDropdown" />
+
+    <FrameLayout
+        android:id="@+id/progress_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="?attr/colorOnPrimary"/>
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

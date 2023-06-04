@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.zenith.ecoscan.databinding.FragmentPreviewBinding
+import com.zenith.ecoscan.utils.overlayLoading
 import java.io.File
 
 class PreviewFragment : Fragment() {
@@ -32,17 +33,24 @@ class PreviewFragment : Fragment() {
         binding.btnCancel.setOnClickListener {
             findNavController().navigate(PreviewFragmentDirections.actionPreviewFragmentToHomeFragment())
         }
+        
+        binding.btnAccept.setOnClickListener { uploadData() }
 
         showImage()
     }
 
     private fun showImage() {
-        val selectedImageUri: String? = args.imageUri
+        val selectedImageUri: String = args.uri
         val uri = Uri.parse(selectedImageUri)
 
-        if (!selectedImageUri.isNullOrEmpty()) {
+        if (selectedImageUri.isNotEmpty()) {
             binding.ivPreview.setImageURI(uri)
         }
+    }
+
+    private fun uploadData() {
+        overlayLoading(binding.progressOverlay, true)
+        findNavController().navigate(PreviewFragmentDirections.actionPreviewFragmentToDetailFragment(args.uri))
     }
 
     override fun onDestroy() {

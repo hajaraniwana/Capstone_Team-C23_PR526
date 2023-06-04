@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorPrimary"
+    tools:context=".screen.detail.DetailFragment">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_back"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="17dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/iv_preview_container"
+            android:layout_width="290dp"
+            android:layout_height="290dp"
+            app:cardCornerRadius="16dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_back">
+
+            <ImageView
+                android:id="@+id/iv_preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image_preview"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_font"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_marginTop="8dp"
+            tools:text="@tools:sample/full_names"
+            app:layout_constraintTop_toBottomOf="@id/iv_preview_container"
+            app:layout_constraintStart_toStartOf="@id/iv_preview_container"/>
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_font"
+            android:textSize="16sp"
+            android:textColor="@color/yellow"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            tools:text="@tools:sample/lorem"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_energy"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type"
+            app:layout_constraintEnd_toStartOf="@id/container_production"
+            tools:ignore="TextSizeCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_font"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="12sp"
+                    android:text="@string/power_consumption" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="41dp"
+                    android:fontFamily="@font/poppins_font"
+                    android:textColor="@color/dark_blue"
+                    android:textFontWeight="600"
+                    android:textSize="32sp"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_font"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="16sp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="13dp"
+                    android:text="@string/watt" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_production"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type"
+            app:layout_constraintStart_toEndOf="@id/container_energy"
+            tools:ignore="TextSizeCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_font"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="12sp"
+                    android:text="@string/production_impact" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_disposal"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_energy"
+            app:layout_constraintEnd_toStartOf="@id/container_consumption"
+            tools:ignore="TextSizeCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_font"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="12sp"
+                    android:text="@string/disposal_impact" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_consumption"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_production"
+            app:layout_constraintStart_toEndOf="@id/container_disposal"
+            tools:ignore="TextSizeCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_font"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="11sp"
+                    android:text="@string/consumption_impact" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/more_button"
+        android:layout_width="290dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/poppins_font"
+        android:text="@string/more_button"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_consumption"
+        tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

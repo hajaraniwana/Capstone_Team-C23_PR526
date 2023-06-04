@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".screen.about.AboutFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="72dp">
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/about_us"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VisualLintOverlap" />
+
+        <TextView
+            android:id="@+id/tv_about_us_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/about_us_text"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_about_us"
+            tools:ignore="VisualLintOverlap" />
+
+        <TextView
+            android:id="@+id/tv_our_mission"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/our_mission"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_about_us_text" />
+
+        <TextView
+            android:id="@+id/tv_our_mission_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/our_mission_text"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_our_mission"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/introduction"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_our_mission_text" />
+
+        <TextView
+            android:id="@+id/tv_introduction_text_one"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/introduction_text_one"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_introduction"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_introduction_text_two"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/introduction_text_two"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_one"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_introduction_text_three"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/introduction_text_three"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_two"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_introduction_text_four"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/introduction_text_four"
+            android:textColor="?attr/colorOnPrimary"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_three"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_our_team"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/our_team"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_four" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

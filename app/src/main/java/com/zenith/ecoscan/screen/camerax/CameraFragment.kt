@@ -53,7 +53,6 @@ class CameraFragment : Fragment() {
     }
 
     private fun takePicture() {
-        binding.progressOverlay.visibility = View.VISIBLE
         val imageCapture = imageCapture ?: return
 
         val photoFile = createFile(requireActivity().application)

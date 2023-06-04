@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_nav_host) as NavHostFragment
         navController = navHostFragment.navController
 
-        val showNavbarFragment = setOf(R.id.homeFragment, R.id.formFragment)
+        val showNavbarFragment = setOf(R.id.homeFragment, R.id.formFragment, R.id.aboutFragment)
 
         navController.addOnDestinationChangedListener {  _, destination, _ ->
             currentDestination = destination.id
@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_form -> {
                     if (currentDestination != R.id.formFragment) {
                         navController.navigate(R.id.formFragment)
+                    }
+                }
+                R.id.menu_about -> {
+                    if (currentDestination != R.id.aboutFragment) {
+                        navController.navigate(R.id.aboutFragment)
                     }
                 }
             }

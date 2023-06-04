@@ -7,9 +7,9 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.net.Uri
-import android.os.Build
 import android.os.Environment
-import androidx.core.content.FileProvider
+import android.view.View
+import android.widget.FrameLayout
 import com.zenith.ecoscan.R
 import java.io.File
 import java.io.FileOutputStream
@@ -67,4 +67,12 @@ fun rotateFile(file: File, isBackCamera: Boolean = false) {
     }
     val result = Bitmap.createBitmap(bitmap, 0, 0, bitmap.width, bitmap.height, matrix, true)
     result.compress(Bitmap.CompressFormat.JPEG, 100, FileOutputStream(file))
+}
+
+fun overlayLoading(frameLayout: FrameLayout, state: Boolean) {
+    if (state) {
+        frameLayout.visibility = View.VISIBLE
+    } else {
+        frameLayout.visibility = View.GONE
+    }
 }

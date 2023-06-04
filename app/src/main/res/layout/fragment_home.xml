@@ -101,7 +101,7 @@
                 android:textColor="?attr/colorOnPrimary"
                 android:textSize="14sp"
                 android:gravity="center_horizontal"
-                app:drawableTopCompat="@drawable/ic_button_scan" />
+                app:drawableTopCompat="@drawable/ic_upload_image" />
 
         </LinearLayout>
 
