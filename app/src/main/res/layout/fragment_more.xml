@@ -78,6 +78,7 @@
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_production_impact"
             app:layout_constraintTop_toBottomOf="@id/tv_production_impact"
+            tools:ignore="TextSizeCheck"
             tools:text="@string/about_us_text" />
 
         <TextView
@@ -104,6 +105,7 @@
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@id/tv_production_impact"
             app:layout_constraintTop_toBottomOf="@id/tv_disposal_impact"
+            tools:ignore="TextSizeCheck"
             tools:text="@string/about_us_text" />
 
         <TextView

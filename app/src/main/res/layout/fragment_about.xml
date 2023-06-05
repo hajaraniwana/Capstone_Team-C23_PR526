@@ -41,7 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_about_us"
-            tools:ignore="VisualLintOverlap" />
+            tools:ignore="VisualLintOverlap,VisualLintLongText" />
 
         <TextView
             android:id="@+id/tv_our_mission"
@@ -58,13 +58,13 @@
             app:layout_constraintTop_toBottomOf="@id/tv_about_us_text" />
 
         <TextView
-            android:id="@+id/tv_our_mission_text"
+            android:id="@+id/tv_our_mission_text_one"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="19dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
-            android:text="@string/our_mission_text"
+            android:text="@string/our_mission_text_one"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="12sp"
             android:justificationMode="inter_word"
@@ -74,99 +74,115 @@
             tools:ignore="VisualLintLongText" />
 
         <TextView
-            android:id="@+id/tv_introduction"
+            android:id="@+id/tv_our_mission_text_two"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/our_mission_text_two"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_our_mission_text_one"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_our_method"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:fontFamily="@font/poppins_font"
-            android:text="@string/introduction"
+            android:text="@string/our_method"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="17dp"
             android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_our_mission_text" />
+            app:layout_constraintTop_toBottomOf="@id/tv_our_mission_text_two" />
 
         <TextView
-            android:id="@+id/tv_introduction_text_one"
+            android:id="@+id/tv_our_method_text"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="19dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
-            android:text="@string/introduction_text_one"
+            android:text="@string/our_method_text"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="12sp"
             android:justificationMode="inter_word"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_introduction"
+            app:layout_constraintTop_toBottomOf="@id/tv_our_method"
             tools:ignore="VisualLintLongText" />
 
         <TextView
-            android:id="@+id/tv_introduction_text_two"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="@font/poppins_font"
-            android:text="@string/introduction_text_two"
-            android:textColor="?attr/colorOnPrimary"
-            android:layout_marginTop="8dp"
-            android:textSize="12sp"
-            android:justificationMode="inter_word"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_one"
-            tools:ignore="VisualLintLongText" />
-
-        <TextView
-            android:id="@+id/tv_introduction_text_three"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="@font/poppins_font"
-            android:text="@string/introduction_text_three"
-            android:textColor="?attr/colorOnPrimary"
-            android:layout_marginTop="8dp"
-            android:textSize="12sp"
-            android:justificationMode="inter_word"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_two"
-            tools:ignore="VisualLintLongText" />
-
-        <TextView
-            android:id="@+id/tv_introduction_text_four"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="@font/poppins_font"
-            android:text="@string/introduction_text_four"
-            android:textColor="?attr/colorOnPrimary"
-            android:layout_marginTop="8dp"
-            android:textSize="12sp"
-            android:justificationMode="inter_word"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_three"
-            tools:ignore="VisualLintLongText" />
-
-        <TextView
-            android:id="@+id/tv_our_team"
+            android:id="@+id/tv_advantages"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:fontFamily="@font/poppins_font"
-            android:text="@string/our_team"
+            android:text="@string/advantages"
             android:textColor="?attr/colorOnPrimary"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="17dp"
             android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_introduction_text_four" />
+            app:layout_constraintTop_toBottomOf="@id/tv_our_method_text" />
+
+        <TextView
+            android:id="@+id/tv_advantages_text_one"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/advantages_text_one"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_advantages"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_advantages_text_two"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/advantages_text_two"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_advantages_text_one"
+            tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_advantages_text_three"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/advantages_text_three"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_advantages_text_two"
+            tools:ignore="VisualLintLongText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

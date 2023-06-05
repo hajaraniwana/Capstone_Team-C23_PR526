@@ -37,13 +37,16 @@
     <string name="watt">watt</string>
     <string name="more_button">GET MORE INFO AND ALTERNATIVE</string>
     <string name="about_us">About Us</string>
-    <string name="about_us_text">We are Team Zenith, which means the highest point in the sky or the highest achievement in preserving the environment.</string>
+    <string name="about_us_text">Zenith is the name of a group of students from various universities in Indonesia who care and want to contribute to protecting the environment. Zenith itself means the peak, which shows our ambition and passion in making an impact.</string>
     <string name="our_mission">Our Mission</string>
-    <string name="our_mission_text">We created this application with the aim of providing knowledge to the users so that they can learn some information about the electronic devices found in their homes.</string>
-    <string name="introduction">Introduction</string>
-    <string name="introduction_text_one">Based on the geographical conditions and natural resources of this country, as well as the challenges faced in preserving and conserving the environment, Indonesia, as the largest archipelago in the world, possesses incredibly rich biodiversity, with vast rainforests, high mountains, and diverse marine ecosystems.</string>
-    <string name="introduction_text_two">However, Indonesia also faces several significant environmental issues. One of them is massive deforestation. Activities such as illegal logging, forest clearance for agriculture and mining expansion, and uncontrolled forest fires have led to the loss of millions of hectares of forest every year. This not only has a negative impact on biodiversity but also contributes to global greenhouse gas emissions.</string>
-    <string name="introduction_text_three">Pollution is also a serious concern in Indonesia. Air pollution, particularly in urban areas such as Jakarta, Surabaya, and Bandung, has reached hazardous levels that pose risks to human health. Meanwhile, water pollution occurs in several rivers and lakes in Indonesia due to industrial waste, agricultural runoff, and unregulated chemical use.</string>
-    <string name="introduction_text_four">Climate change is also a significant issue in Indonesia. The country is vulnerable to threats such as rising sea levels, increased extreme temperatures, floods, and droughts. Small islands in Indonesia are at risk of submergence due to global warming and polar ice melting. Furthermore, climate change can also affect food production, water resources, and public health.</string>
+    <string name="our_mission_text_one">EcoScan was created to help ordinary people, YES, you, easily understand the environmental impact of various household electronic equipment you own. It provides information not only about the energy consumed but also about the production, consumption, and disposal impact of these devices.</string>
+    <string name="our_mission_text_two">Certainly, it is important for each of us to contribute to environmental conservation, including making decisions that have the best impact on our environment.</string>
+    <string name="our_method">Our Methode</string>
+    <string name="our_method_text">EcoScan works by assisting you in scanning your electronic equipment and instantly providing you with detailed information about the product category and its environmental impact.</string>
+    <string name="advantages">Advantages</string>
+    <string name="advantages_text_one">1. Instant results! No need to wait long or search for articles on the internet.</string>
+    <string name="advantages_text_two">2. Online! Our data for an electronic device is not stored on your device, saving storage space!</string>
+    <string name="advantages_text_three">3. Data sourced from Real Research! Not from unreliable articles or blogs, we gather data from Research Datasets and research findings.</string>
     <string name="our_team">Our Team</string>
+    <string name="no_data_history">No Data History</string>
 </resources>
