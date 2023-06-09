@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "005228f4-9fd3-4697-b809-3674962cc6c8",
+		"name": "Predict API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24927312"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/USER/Downloads/yellow.jpg"
+						}
+					]
+				},
+				"url": "{{api_url}}/predict"
+			},
+			"response": [
+				{
+					"name": "Post Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/USER/Downloads/yellow.jpg"
+								}
+							]
+						},
+						"url": "{{api_url}}/predict"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.6 Python/3.9.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Jun 2023 13:48:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "368"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"item\": {\n        \"Average Energy\": 16.38,\n        \"Dampak Disposal\": \"\",\n        \"Dampak Konsumsi\": \"\",\n        \"Dampak Produksi\": \"\",\n        \"Image\": \"https://drive.google.com/file/d/1Pygg9Btz-9UoDzYVL_E1onHG3v7hn5EM\",\n        \"Link Sumber\": \"https://www.kaggle.com/datasets/ecoco2/household-appliances-power-consumption\",\n        \"name\": \"Laptop\"\n    },\n    \"result\": \"This image most likely belongs to Laptop with a 99.88 percent confidence.\"\n}"
+				},
+				{
+					"name": "Post Failed (File Not Inserted)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": "{{api_url}}/predict"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.6 Python/3.9.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Jun 2023 13:51:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"No file selected.\"\n}"
+				},
+				{
+					"name": "Post but item is not in database",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/USER/Downloads/tess.png"
+								}
+							]
+						},
+						"url": "{{api_url}}/predict"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.6 Python/3.9.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Jun 2023 13:53:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"item\": null,\n    \"result\": \"This image most likely belongs to Hair Dryer with a 87.26 percent confidence.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Get Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{api_url}}"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.6 Python/3.9.2"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Jun 2023 13:50:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<h1>Welcome!</h1>"
+				}
+			]
+		}
+	]
+}
