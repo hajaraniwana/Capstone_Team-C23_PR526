@@ -324,8 +324,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_cancel_camera" />
+                            <entry key="outputName" value="bg_preview" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/Group 166.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -10,11 +10,9 @@ import android.net.Uri
 import android.os.Environment
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import com.zenith.ecoscan.R
-import java.io.File
-import java.io.FileOutputStream
-import java.io.InputStream
-import java.io.OutputStream
+import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -75,4 +73,27 @@ fun overlayLoading(frameLayout: FrameLayout, state: Boolean) {
     } else {
         frameLayout.visibility = View.GONE
     }
+}
+
+fun reduceFileImage(file: File): File {
+    val bitmap = BitmapFactory.decodeFile(file.path)
+    var compressQuality = 100
+    var streamLength: Int
+    do {
+        val bmpStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, bmpStream)
+        val bmpPicByteArray = bmpStream.toByteArray()
+        streamLength = bmpPicByteArray.size
+        compressQuality -= 5
+    } while (streamLength > 1000000)
+    bitmap.compress(Bitmap.CompressFormat.JPEG, compressQuality, FileOutputStream(file))
+    return file
+}
+
+fun showToast(context: Context, message: String, dataMessage: String) {
+    Toast.makeText(
+        context,
+        "$message, $dataMessage",
+        Toast.LENGTH_SHORT
+    ).show()
 }

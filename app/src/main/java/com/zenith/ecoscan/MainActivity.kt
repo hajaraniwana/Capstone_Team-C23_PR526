@@ -7,7 +7,9 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.zenith.ecoscan.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -21,12 +23,20 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_nav_host) as NavHostFragment
         navController = navHostFragment.navController
 
-        val showNavbarFragment = setOf(R.id.homeFragment, R.id.formFragment, R.id.aboutFragment)
+        val showNavbarFragment = setOf(R.id.homeFragment, R.id.formFragment, R.id.aboutFragment, R.id.historyFragment)
 
         navController.addOnDestinationChangedListener {  _, destination, _ ->
             currentDestination = destination.id
             if (destination.id in showNavbarFragment) {
                 binding.bottomNavigation.visibility = View.VISIBLE
+
+                when (destination.id) {
+                    R.id.homeFragment -> binding.bottomNavigation.selectedItemId = R.id.menu_home
+                    R.id.formFragment -> binding.bottomNavigation.selectedItemId = R.id.menu_form
+                    R.id.aboutFragment -> binding.bottomNavigation.selectedItemId = R.id.menu_about
+                    R.id.historyFragment -> binding.bottomNavigation.selectedItemId = R.id.menu_history
+                }
+
             } else {
                 binding.bottomNavigation.visibility = View.GONE
             }
@@ -49,6 +59,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_about -> {
                     if (currentDestination != R.id.aboutFragment) {
                         navController.navigate(R.id.aboutFragment)
+                    }
+                }
+                R.id.menu_history -> {
+                    if (currentDestination != R.id.historyFragment) {
+                        navController.navigate(R.id.historyFragment)
                     }
                 }
             }

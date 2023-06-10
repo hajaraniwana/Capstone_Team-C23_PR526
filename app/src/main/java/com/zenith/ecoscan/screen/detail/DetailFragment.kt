@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
+import com.zenith.ecoscan.R
 import com.zenith.ecoscan.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
@@ -26,12 +29,22 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.historyFragment)
+        }
+
         setData()
     }
 
     private fun setData() {
-        val image = Uri.parse(args.uri)
-        binding.ivPreview.setImageURI(image)
+        with(binding) {
+            tvWatt.text = args.dataItem.averageEnergy.toString()
+
+            Glide.with(requireContext())
+                .load(args.dataItem.image)
+                .centerCrop()
+                .into(ivPreview)
+        }
     }
 
     override fun onDestroy() {

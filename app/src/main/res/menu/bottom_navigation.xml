@@ -6,13 +6,13 @@
         android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/menu_scan"
-        android:title="@string/scan"
-        android:icon="@drawable/ic_scan"/>
+        android:id="@+id/menu_history"
+        android:title="@string/history"
+        android:icon="@drawable/ic_history"/>
 
     <item
         android:id="@+id/menu_about"
-        android:title="@string/history"
+        android:title="@string/about"
         android:icon="@drawable/ic_about"/>
 
     <item

@@ -5,8 +5,9 @@
     <string name="scan_button">Scan Button</string>
     <string name="upload_image">Upload</string>
     <string name="home">Home</string>
-    <string name="scan">Scan</string>
+    <string name="about">About</string>
     <string name="history">History</string>
+    <string name="scan">Scan</string>
     <string name="image_preview">Image Preview</string>
     <string name="cancel_button">Cancel</string>
     <string name="accept_button">Accept</string>
@@ -49,4 +50,15 @@
     <string name="advantages_text_three">3. Data sourced from Real Research! Not from unreliable articles or blogs, we gather data from Research Datasets and research findings.</string>
     <string name="our_team">Our Team</string>
     <string name="no_data_history">No Data History</string>
+    <string name="alternative">Alternative</string>
+    <string name="wana">Wana</string>
+    <string name="rezha">Rezha</string>
+    <string name="putra">Putra</string>
+    <string name="azilla">Azilla</string>
+    <string name="iqbal">Iqbal</string>
+    <string name="afdan">Afdan</string>
+    <string name="machine_learning">Machine Learning</string>
+    <string name="cloud_computing">Cloud Computing</string>
+    <string name="mobile_development">Mobile Development</string>
+    <string name="error">Error</string>
 </resources>

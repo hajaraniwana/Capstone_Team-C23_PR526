@@ -10,7 +10,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="72dp">
+        android:paddingStart="19dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="74dp">
 
         <TextView
             android:id="@+id/tv_about_us"
@@ -22,7 +24,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="VisualLintOverlap" />
@@ -31,8 +32,6 @@
             android:id="@+id/tv_about_us_text"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
             android:text="@string/about_us_text"
             android:textColor="?attr/colorOnPrimary"
@@ -53,7 +52,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="17dp"
-            android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_about_us_text" />
 
@@ -61,8 +59,6 @@
             android:id="@+id/tv_our_mission_text_one"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
             android:text="@string/our_mission_text_one"
             android:textColor="?attr/colorOnPrimary"
@@ -77,8 +73,6 @@
             android:id="@+id/tv_our_mission_text_two"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
             android:text="@string/our_mission_text_two"
             android:textColor="?attr/colorOnPrimary"
@@ -100,7 +94,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="17dp"
-            android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_our_mission_text_two" />
 
@@ -108,8 +101,6 @@
             android:id="@+id/tv_our_method_text"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
             android:text="@string/our_method_text"
             android:textColor="?attr/colorOnPrimary"
@@ -130,7 +121,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="17dp"
-            android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_our_method_text" />
 
@@ -138,8 +128,6 @@
             android:id="@+id/tv_advantages_text_one"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
             android:text="@string/advantages_text_one"
             android:textColor="?attr/colorOnPrimary"
@@ -154,8 +142,6 @@
             android:id="@+id/tv_advantages_text_two"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
             android:text="@string/advantages_text_two"
             android:textColor="?attr/colorOnPrimary"
@@ -171,8 +157,6 @@
             android:id="@+id/tv_advantages_text_three"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginStart="19dp"
-            android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_font"
             android:text="@string/advantages_text_three"
             android:textColor="?attr/colorOnPrimary"
@@ -183,6 +167,288 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_advantages_text_two"
             tools:ignore="VisualLintLongText" />
+
+        <TextView
+            android:id="@+id/tv_our_team"
+            android:layout_width="81dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/poppins_font"
+            android:text="@string/our_team"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_advantages_text_three"
+            tools:ignore="TextSizeCheck" />
+        
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_wana"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_our_team"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@color/grey">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="97dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/profile_wana"
+                    android:contentDescription="@string/wana"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/wana"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/machine_learning"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_rezha"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_wana"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@color/grey">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="97dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/profile_rezha"
+                    android:contentDescription="@string/rezha"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/rezha"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/cloud_computing"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_putra"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_rezha"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@color/grey">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="97dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/profile_putra"
+                    android:contentDescription="@string/putra"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/putra"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/mobile_development"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_azilla"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_our_team"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@color/grey">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="97dp"
+                    android:layout_marginTop="6dp"
+                    android:contentDescription="@string/azilla"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/azilla"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/machine_learning"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_iqbal"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_wana"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@color/grey">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="97dp"
+                    android:layout_marginTop="6dp"
+                    android:contentDescription="@string/iqbal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/iqbal"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/machine_learning"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_afdan"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_iqbal"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@color/grey">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="97dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/profile_afdan"
+                    android:contentDescription="@string/afdan"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/iqbal"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/poppins_font"
+                    android:text="@string/cloud_computing"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
