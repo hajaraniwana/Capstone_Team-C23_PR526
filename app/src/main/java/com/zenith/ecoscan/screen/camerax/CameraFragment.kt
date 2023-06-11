@@ -74,8 +74,7 @@ class CameraFragment : Fragment() {
                     val isBackCamera = cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
                     photoFile.let { file ->
                         rotateFile(file, isBackCamera)
-                        Uri.fromFile(file)
-                        val imageUri = file.toString()
+                        val imageUri = Uri.fromFile(file).toString()
                         findNavController().navigate(CameraFragmentDirections.actionCameraFragmentToPreviewFragment(imageUri))
                     }
                 }

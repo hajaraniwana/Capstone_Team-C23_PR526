@@ -55,7 +55,7 @@ class Repository @Inject constructor(private val apiService: ApiService, private
 
                         itemResponse.value = Result.Success(response.body()!!)
                     } else {
-                        itemResponse.value = Result.Error(response.message())
+                        itemResponse.value = Result.Error("Can't detect photo")
                     }
                 }
             }
