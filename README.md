@@ -78,4 +78,5 @@ EcoScan : Track down Your Energy Usage for a better environment for everyone!
 -- INSERT FIGMA LINK HERE --
 
 # Paper / Journals / Article
--- INSERT HERE -- 
+1. Hischier, R., Reale, F., Castellani, V., & Sala, S. (2020). Environmental impacts of household appliances in Europe and scenarios for their impact reduction. Journal of Cleaner Production, 267, 121952. https://doi.org/10.1016/j.jclepro.2020.121952
+https://www.researchgate.net/publication/341338317_Environmental_impacts_of_household_appliances_in_Europe_and_scenarios_for_their_impact_reduction
