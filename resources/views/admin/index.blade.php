@@ -342,7 +342,7 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>We have 6 members in our team who have been divided and determined in the distribution of their respective tasks, from machine learning there are 3 people, from cloud computing there are 2 people and 1 person from mobile development.</p>
         </div>
 
         <div class="row">
