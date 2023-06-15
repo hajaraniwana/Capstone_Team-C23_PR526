@@ -67,9 +67,13 @@ Make predictions (in our case,the predictions for all classes have a confidence 
 - Monitor the API incase there are any errors or bugs
 
 3. Mobile Development
-- Step 1
-- Step 2
-- Step n
+- Design Wireframe
+- Design Mockup
+- Slicing/Implement our Mockup to UI
+- Use Navigation Component for flow of Application
+- Implement clean architecture for consuming/Integrating to API with Retrofit2
+- Build APK
+
 
 # Tools and Resources Used in this project 
 
