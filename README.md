@@ -97,7 +97,11 @@ Make predictions (in our case,the predictions for all classes have a confidence 
 -- INSERT HERE --
 
 # App Design 
--- INSERT FIGMA LINK HERE --
+UI EcoScan : https://www.figma.com/file/LLsOE1Ggj4tihq5UdGQvD6/Eco-Scan-Mobile-Apps?type=design&node-id=0%3A1&t=8Xi3thiLxTwMTSJD-1 
+
+# Another Complement
+Wireframe : https://www.figma.com/file/j2wr2OdJk7mLKyA7cRilsQ/Application-Design?type=design&node-id=0%3A1&t=w4swHHDKWGRgTYg4-1
+Flowchart Capstone : https://www.figma.com/file/WXZr4PVVRCIcUsqh1mAJ0g/Flow-Chart-Product-Based-Capstone?type=whiteboard&node-id=0%3A1&t=LS06Xi0XCZbhZhnO-1 
 
 # Paper / Journals / Article
 1. Hischier, R., Reale, F., Castellani, V., & Sala, S. (2020). Environmental impacts of household appliances in Europe and scenarios for their impact reduction. Journal of Cleaner Production, 267, 121952. https://doi.org/10.1016/j.jclepro.2020.121952
