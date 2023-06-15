@@ -27,12 +27,13 @@ EcoScan : Track down Your Energy Usage for a better environment for everyone!
 
 1. Machine Learning
 - Gather the required dataset
-Collect the dataset from open and public dataset provider (kaggle, roboflow, etc) or scrape images if needed. In this case, we are scrape images of household appliances from Google.
+Collect the dataset from open and public dataset provider (kaggle, roboflow, etc) or scrape images if needed. In this case, we are scrape images of household appliances from Google using Chrome Extension: Download All Images.
+After that, we cleaning and resizing the dataset. Only images meet the specified criteria are used by us.
 
 - Build the model
-1) Install all the libraries required for image classification models, we use Tensorflow and transfer learning model: DenseNet121, of which you can see the architecture at the following link: https://iq.opengenus.org/architecture-of-densenet121/
-2) Prepocess the image using some augmentation 
-3) Train the model using local Jupyter Notebook
+Install all the libraries required for image classification models, we use Tensorflow and transfer learning model: DenseNet121, of which you can see the architecture at the following link: https://iq.opengenus.org/architecture-of-densenet121/.
+Prepocess the image using some augmentation.
+Train the model using local Jupyter Notebook.
 
 - Fine-tune the model
 Fine tuning the model by modifying the trainable layers and train again the model using generators.
@@ -41,15 +42,15 @@ Fine tuning the model by modifying the trainable layers and train again the mode
 We can see if this model is either overfitting, underfitting, or suit the dataset well. In this case, the DenseNet121 suits our dataset well with accuracy >96%.
 
 - Save the model
-We save the model in .h5 format using command model.save("your_model_name.h5")
+We save the model in .h5 format using command model.save("your_model_name.h5").
 
 - Make predictions
-1) Install all libraries required
-2) Define the label of our classes (we have 11 classes: Air Conditioner, Hair Dryer, Iron, Laptop, Oven, Rice Cooker, Refrigerator, Television, Vacuum Cleaner, Washing Machine, and Lamp)
-3) Load the image for testing
-4) Resize and converted the image into array form
-5) Load the model that we saved before (in step 5)
-6) Make predictions (in our case,the predictions for all classes have a confidence value > 90%)
+Install all libraries required.
+Define the label of our classes (we have 11 classes: Air Conditioner, Hair Dryer, Iron, Laptop, Oven, Rice Cooker, Refrigerator, Television, Vacuum Cleaner, Washing Machine, and Lamp).
+Load the image for testing.
+Resize and converted the image into array form.
+Load the model that we saved before (in step 5).
+Make predictions (in our case,the predictions for all classes have a confidence value > 90%).
 
 - Configure and deploy the model
 
@@ -77,9 +78,10 @@ We save the model in .h5 format using command model.save("your_model_name.h5")
 # Tools and Resources Used in this project 
 
 # Machine Learning
-- Tools 1
-- Tools 2
-- Tools n
+- Libraries (Tensorflow, Numpy, Matplotlib, Glob, os, Pandas, Pillow)
+- Jupyter Notebook
+- Github
+- Google Image Scapper (Download All Images)
 
 # Cloud Computing
 - Google Cloud (with $200 worth of credit)
