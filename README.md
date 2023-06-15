@@ -80,6 +80,7 @@ Make predictions (in our case,the predictions for all classes have a confidence 
 # Machine Learning
 - Libraries (Tensorflow, Numpy, Matplotlib, Glob, os, Pandas, Pillow)
 - Jupyter Notebook
+- Anaconda
 - Github
 - Google Image Scapper (Download All Images)
 
