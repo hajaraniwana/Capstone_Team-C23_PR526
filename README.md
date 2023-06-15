@@ -89,9 +89,15 @@ Make predictions (in our case,the predictions for all classes have a confidence 
 - GitHub
 
 # Mobile Development
-- Tools 1
-- Tools 2
-- Tools n
+- Android Studio
+- Kotlin
+- Navigation Component
+- CameraX
+- DaggerHilt
+- Retrofit
+- OkHttp3
+- Room
+- Glide
 
 # Datasets
 Drive : https://drive.google.com/drive/folders/1Jadk8mU3dPPhifJB0JA1dJF31CPwpNk0?usp=sharing
