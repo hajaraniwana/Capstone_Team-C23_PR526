@@ -28,15 +28,11 @@ EcoScan : Track down Your Energy Usage for a better environment for everyone!
 1. Machine Learning
 - Gather the required dataset
 Collect the dataset from open and public dataset provider (kaggle, roboflow, etc) or scrape images if needed. In this case, we are scrape images of household appliances from Google using Chrome Extension: Download All Images.
-After that, we cleaning and resizing the dataset. Only images meet the specified criteria are used by us.
+After that, we cleaning and resizing the dataset. Only images meet the specified criteria are used by us. After that we split the balanced data per class with a training and validation ratio of 70:30
 
 - Build the model
-Install all the libraries required for image classification models, we use Tensorflow and transfer learning model: DenseNet121, of which you can see the architecture at the following link: https://iq.opengenus.org/architecture-of-densenet121/.
-Prepocess the image using some augmentation.
+Before building the model we do image augmentation.To build a model start with install all the libraries required for image classification models, we use Tensorflow and transfer learning model: DenseNet121, of which you can see the architecture at the following link: https://iq.opengenus.org/architecture-of-densenet121/. Then add training again in addition with GlobalAveragePooling2D(), Dense(11, activation='softmax')
 Train the model using local Jupyter Notebook.
-
-- Fine-tune the model
-Fine tuning the model by modifying the trainable layers and train again the model using generators.
 
 - Plot the loss and accuracy of training and validation into metrics. 
 We can see if this model is either overfitting, underfitting, or suit the dataset well. In this case, the DenseNet121 suits our dataset well with accuracy >96%.
@@ -78,7 +74,7 @@ Make predictions (in our case,the predictions for all classes have a confidence 
 # Tools and Resources Used in this project 
 
 # Machine Learning
-- Libraries (Tensorflow, Numpy, Matplotlib, Glob, os, Pandas, Pillow)
+- Libraries (Tensorflow, Numpy, Matplotlib, Glob, os, Pandas, Pillow, PIL, shutil, sklearn)
 - Jupyter Notebook
 - Anaconda
 - Github
