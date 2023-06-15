@@ -9,7 +9,7 @@
           <h1>Better Solutions For Your Environmental</h1>
           <h2>An App built to help consumers understand the energy consumption and the environmental impact of their household items.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#hero" class="btn-get-started scrollto">Get Started</a>
+            <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en" class="btn-get-started scrollto">Instal Now</a>
             <a href="https://www.youtube.com/watch?v=QW0_MT1wU_U" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
@@ -37,9 +37,9 @@
             Our team decided to pick this theme because we want to show people how much energy their daily appliances are using. with this app, people can be mindful of their impact on the environment. We hope to encourage people to make more careful decisions about their energy consumption and reduce carbon footprint. Our app will have a positive impact especially on the environment and provide a more sustainable future for all.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Application prototype</li>
-              <li><i class="ri-check-double-line"></i> Fully functional application for image of household appliances</li>
-              <li><i class="ri-check-double-line"></i> APK or Bundle file can be use or publish to Play Store</li>
+              <li><i class="ri-check-double-line"></i><p> Application prototype</p></li>
+              <li><i class="ri-check-double-line"></i><p> Fully functional application for image of household appliances</p></li>
+              <li><i class="ri-check-double-line"></i><p> APK or Bundle file can be use or publish to Play Store</p></li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
@@ -62,9 +62,9 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content">
-              <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+              <h3><strong>Kenapa Anda Memilih Menggunakan Aplikasi Kami?</strong></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                This application can help you understand the problems of daily use of electronics.
               </p>
             </div>
 
@@ -168,14 +168,14 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>EcoScan works by helping you scan your electronic equipment, and instantly, giving you detailed information about the product category, and its impact on the environment.</p>
         </div>
 
         <div class="row">
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
+              <h4><a href="">Scan</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div>
@@ -183,7 +183,7 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspici</a></h4>
+              <h4><a href="">Dampak Produksi</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div>
@@ -191,7 +191,7 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
+              <h4><a href="">Power Detection</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
@@ -199,7 +199,7 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
+              <h4><a href="">Environmental Effects</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>
@@ -370,7 +370,7 @@
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="img/team/team-2.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Hajarani Syadzwana</h4>
                 <span>Mechine Learning</span>
@@ -404,7 +404,7 @@
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="img/team/team-5.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>T.M. Rezha Taufiqurrahman</h4>
                 <span>Cloud Computing</span>
@@ -421,7 +421,7 @@
 
           <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="img/team/team-5.png" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Afdan Syukron</h4>
                 <span>Cloud Computing</span>
