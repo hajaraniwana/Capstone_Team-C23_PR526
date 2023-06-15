@@ -106,3 +106,4 @@ Make predictions (in our case,the predictions for all classes have a confidence 
 # Paper / Journals / Article
 1. Hischier, R., Reale, F., Castellani, V., & Sala, S. (2020). Environmental impacts of household appliances in Europe and scenarios for their impact reduction. Journal of Cleaner Production, 267, 121952. https://doi.org/10.1016/j.jclepro.2020.121952
 https://www.researchgate.net/publication/341338317_Environmental_impacts_of_household_appliances_in_Europe_and_scenarios_for_their_impact_reduction
+2. Huang, G., Liu, Z., van der Maaten, L., & Weinberger, K. Q. (2017). Densely Connected Convolutional Networks. Retrieved from https://arxiv.org/abs/1608.06993
