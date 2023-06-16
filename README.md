@@ -106,6 +106,7 @@ Make predictions (in our case,the predictions for all classes have a confidence 
 - OkHttp3
 - Room
 - Glide
+- Figma
 
 # Datasets
 Drive : https://drive.google.com/drive/folders/1Jadk8mU3dPPhifJB0JA1dJF31CPwpNk0?usp=sharing
