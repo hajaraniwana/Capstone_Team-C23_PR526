@@ -21,7 +21,11 @@ Sustainable Living
 EcoScan : Track down Your Energy Usage for a better environment for everyone!
 
 # Summary of the Project
--- INSERT HERE --
+EcoScan is designed to help users to create a better environment for everyone. the app is built to make users aware of how much energy their daily appliances is using and how they can affect the user's personal life and other people's life. the app can receive inputs of images of the user's daily appliances and scan for its energy usage. the app will then display a list of outputs regarding the scanned / uploaded item. the output consists of Name of the appliance, Energy Usage, Disposal Effect, Production Effect, Consumption Effect, the Image of the appliances, the location where the appliances might be found in the user's home, resource, result, and recomendations. the app has a simple design in order to make sure that the user knows they output that theyre getting from the app.
+
+EcoScan also provides a feature where user can look for items by picking on a form. the form consists of location of the appliances, the name for the device and its detailed type. whenever the users submit a form, EcoScan will search through its database to find the corresponding result for that appliances. making it flexible for user whenever they can't use their cameras or photos.
+
+Overall, EcoScan helps users to be aware on their daily appliances energy usage and how can they make a better environment, not only for themselves, but also all of us!
 
 # Steps to Replicate the Project
 
