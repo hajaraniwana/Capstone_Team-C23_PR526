@@ -337,6 +337,7 @@
                     android:layout_width="80dp"
                     android:layout_height="97dp"
                     android:layout_marginTop="6dp"
+                    android:src="@drawable/profile_azilla"
                     android:contentDescription="@string/azilla"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -381,6 +382,7 @@
                     android:layout_width="80dp"
                     android:layout_height="97dp"
                     android:layout_marginTop="6dp"
+                    android:src="@drawable/profile_iqbal"
                     android:contentDescription="@string/iqbal"/>
                 <TextView
                     android:layout_width="wrap_content"

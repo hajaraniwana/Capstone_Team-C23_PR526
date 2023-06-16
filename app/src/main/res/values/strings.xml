@@ -16,20 +16,17 @@
     <string name="take_photo_button">Take Photo</string>
     <string name="switch_camera_button">Switch Camera</string>
     <string name="failed_open_camera">Failed to Open Camera</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recommendation">Recommendation</string>
     <string name="success">Success</string>
     <string name="error_take_photo">Error to Take Photo</string>
     <string name="didnt_get_permission">Didn\'t Get Camera Permission</string>
     <string name="cancel_camera">Cancel Camera</string>
-    <string name="question_first_dropdown">Is Electronic Device ?</string>
-    <string name="first_dropdown">Dropdown for Electronic Device</string>
-    <string name="question_second_dropdown">Location of Item at Home ?</string>
-    <string name="second_dropdown">Dropdown for Location of Item at Home</string>
-    <string name="question_third_dropdown">Item Name ?</string>
-    <string name="third_dropdown">Dropdown for Item Name</string>
-    <string name="question_fourth_dropdown">Item Type ?</string>
-    <string name="fourth_dropdown">Dropdown for Item Type</string>
+    <string name="question_first_dropdown">Location of Item at Home ?</string>
+    <string name="first_dropdown">Dropdown for Location of Item at Home</string>
+    <string name="question_second_dropdown">Item Name ?</string>
+    <string name="second_dropdown">Dropdown for Item Name</string>
+    <string name="question_third_dropdown">Item Type ?</string>
+    <string name="third_dropdown">Dropdown for Item Type</string>
     <string name="submit">SUBMIT</string>
     <string name="power_consumption">Power Consumption</string>
     <string name="production_impact">Production Impact</string>
@@ -61,4 +58,5 @@
     <string name="cloud_computing">Cloud Computing</string>
     <string name="mobile_development">Mobile Development</string>
     <string name="error">Error</string>
+    <string name="energy_form">Energy Usage: %s kWh</string>
 </resources>

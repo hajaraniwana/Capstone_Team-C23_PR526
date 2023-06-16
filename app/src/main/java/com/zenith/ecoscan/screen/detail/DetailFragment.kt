@@ -1,6 +1,5 @@
 package com.zenith.ecoscan.screen.detail
 
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -38,10 +37,22 @@ class DetailFragment : Fragment() {
 
     private fun setData() {
         with(binding) {
-            tvWatt.text = args.dataItem.averageEnergy.toString()
+
+            tvName.text = args.data.name
+
+            tvWatt.text = args.data.averageEnergy.toString()
+            tvProductionShort.text = args.data.dampakProduksi
+            tvConsumptionShort.text = args.data.dampakKonsumsi
+            tvDisposalShort.text = args.data.dampakDisposal
+
+            tvProductionImpactText.text = args.data.dampakProduksi
+            tvConsumptionImpactText.text = args.data.dampakKonsumsi
+            tvDisposalImpactText.text = args.data.dampakDisposal
+
+            tvRecommend.text = args.data.recommendations
 
             Glide.with(requireContext())
-                .load(args.dataItem.image)
+                .load(args.data.image)
                 .centerCrop()
                 .into(ivPreview)
         }

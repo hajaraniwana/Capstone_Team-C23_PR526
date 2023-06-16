@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.zenith.ecoscan.data.api.response.Item
+import com.zenith.ecoscan.data.api.response.ItemInfo
 import com.zenith.ecoscan.data.local.DataEntity
 import com.zenith.ecoscan.databinding.ItemHistoryBinding
 
-class HistoryAdapter (private val onClickItem: (data: Item) -> Unit) : RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
+class HistoryAdapter (private val onClickItem: (data: ItemInfo) -> Unit) : RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
     private var listHistory = emptyList<DataEntity>()
 
     class ViewHolder(var binding: ItemHistoryBinding) : RecyclerView.ViewHolder(binding.root)
@@ -25,6 +25,7 @@ class HistoryAdapter (private val onClickItem: (data: Item) -> Unit) : RecyclerV
         val item = listHistory[position]
         with(holder.binding) {
             tvName.text = item.name
+            tvDate.text = item.date
 
             Glide.with(holder.itemView.context)
                 .load(item.image)
@@ -32,14 +33,16 @@ class HistoryAdapter (private val onClickItem: (data: Item) -> Unit) : RecyclerV
                 .into(ivPreview)
 
             root.setOnClickListener {
-                val data = Item(
+                val data = ItemInfo(
+                    item.lokasi,
                     item.averageEnergy?.toDouble(),
                     item.dampakDisposal,
+                    item.linkSumber,
                     item.dampakProduksi,
                     item.name,
                     item.dampakKonsumsi,
                     item.image,
-                    item.linkSumber
+                    item.recommendations
                 )
                 onClickItem(data)
             }

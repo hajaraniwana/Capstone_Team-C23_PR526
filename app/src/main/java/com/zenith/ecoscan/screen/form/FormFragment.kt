@@ -10,19 +10,38 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.zenith.ecoscan.R
+import com.zenith.ecoscan.data.api.response.DevicesItem
 import com.zenith.ecoscan.databinding.FragmentFormBinding
+import com.zenith.ecoscan.utils.Result
 import com.zenith.ecoscan.utils.overlayLoading
+import com.zenith.ecoscan.utils.showToast
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FormFragment : Fragment() {
     private var _binding: FragmentFormBinding? = null
     private val binding get() = _binding!!
-    private val firstOptions = arrayOf("YES", "NO")
+    private val formViewModel: FormViewModel by viewModels()
+
+    private val firstOptions = arrayOf(
+        "Kamar Tidur",
+        "Kamar Ganti",
+        "Langit Rumah",
+        "Ruang Kerja",
+        "Dapur",
+        "Ruang Keluarga",
+        "Gudang",
+        "Ruang Cuci"
+    )
     private var secondOptions = arrayOf<String>()
     private var thirdOptions = arrayOf<String>()
-    private var fourthOptions = arrayOf<String>()
+    private var listDevices: List<DevicesItem?>? = null
+    private var location: String? = null
+    private var device: String? = null
+    private var deviceType: String? = null
 
 
     override fun onCreateView(
@@ -37,11 +56,49 @@ class FormFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setDropdown(binding.firstDropdown, firstOptions)
-        setDropdown(binding.secondDropdown, secondOptions)
-        setDropdown(binding.thirdDropdown, thirdOptions)
-        setDropdown(binding.fourthDropdown, fourthOptions)
 
         binding.submitButton.setOnClickListener { uploadData() }
+
+        binding.firstDropdown.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedOption = firstOptions[position]
+                location = selectedOption
+
+                getDevicesData(selectedOption)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+
+        binding.secondDropdown.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedOption = secondOptions[position]
+                if (selectedOption.isNotEmpty()) {
+                    device = selectedOption
+                }
+
+                val filteredDevices = listDevices?.filter { it?.device == selectedOption }
+                thirdOptions = filteredDevices?.mapNotNull { it?.detailedType }?.distinct()?.toTypedArray() ?: emptyArray()
+
+                setDropdown(binding.thirdDropdown, thirdOptions)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+
+        binding.thirdDropdown.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedOption = thirdOptions[position]
+                if (selectedOption.isNotEmpty()) {
+                    deviceType = selectedOption
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
 
         playAnimation()
     }
@@ -49,32 +106,40 @@ class FormFragment : Fragment() {
     private fun <T> setDropdown(dropdown: Spinner, options: Array<T>) {
         val adapter = ArrayAdapter(requireContext(), R.layout.item_dropdown, options)
         dropdown.adapter = adapter
-
-        dropdown.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val selectedOption = options[position]
-                Toast.makeText(requireContext(), "Pilihan Dropdown: $selectedOption", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-            }
-        }
     }
 
     private fun uploadData() {
-        overlayLoading(binding.progressOverlay, true)
+        if (!device.isNullOrBlank() && !deviceType.isNullOrBlank() ) {
+            formViewModel.calculateEnergy(location!!, device!!, deviceType!!).observe(viewLifecycleOwner) { response ->
+                when (response) {
+                    is Result.Loading -> overlayLoading(binding.progressOverlay, true)
+
+                    is Result.Success -> {
+                        overlayLoading(binding.progressOverlay, false)
+
+                        val energy = response.data.energyUsage?.energyUsage.toString()
+                        binding.tvEnergy.text = getString(R.string.energy_form, energy)
+                        binding.tvEnergy.visibility = View.VISIBLE
+                    }
+
+                    is Result.Error -> {
+                        showToast(requireContext(), getString(R.string.error), response.error)
+                    }
+                }
+            }
+        } else {
+            showToast(requireContext(), getString(R.string.error), "Fill all fields")
+        }
     }
 
     private fun playAnimation() {
         animationText(binding.tvFirstDropdown)
         animationText(binding.tvSecondDropdown)
         animationText(binding.tvThirdDropdown)
-        animationText(binding.tvFourthDropdown)
 
         animationSpinner(binding.firstDropdown)
         animationSpinner(binding.secondDropdown)
         animationSpinner(binding.thirdDropdown)
-        animationSpinner(binding.fourthDropdown)
 
         val image = ObjectAnimator.ofFloat(binding.ivFormImage, View.ALPHA, 1f).setDuration(500)
         val button = ObjectAnimator.ofFloat(binding.submitButton, View.ALPHA, 1f).setDuration(500)
@@ -95,5 +160,36 @@ class FormFragment : Fragment() {
         ObjectAnimator.ofFloat(spinner, View.TRANSLATION_X, 1000f, 0f).apply {
             duration = 500
         }.start()
+    }
+
+    private fun getDevicesData(selectedOption: String) {
+        formViewModel.getDevices(selectedOption).observe(viewLifecycleOwner) { response ->
+            when (response) {
+                is Result.Loading -> overlayLoading(binding.progressOverlay, true)
+
+                is Result.Success -> {
+                    listDevices = response.data.devices
+
+                    secondOptions = listDevices?.mapNotNull { it?.device }?.distinct()?.toTypedArray() ?: emptyArray()
+
+                    setDropdown(binding.secondDropdown, secondOptions)
+
+                    if (firstOptions.contains(selectedOption)) {
+                        val filteredDevices = listDevices?.filter { it?.device == selectedOption }
+                        thirdOptions = filteredDevices?.mapNotNull { it?.detailedType }?.distinct()?.toTypedArray() ?: emptyArray()
+                        setDropdown(binding.thirdDropdown, thirdOptions)
+                    } else {
+                        thirdOptions = emptyArray()
+                        setDropdown(binding.thirdDropdown, thirdOptions)
+                    }
+
+                    overlayLoading(binding.progressOverlay, false)
+                }
+
+                is Result.Error -> {
+                    showToast(requireContext(), getString(R.string.error), response.error)
+                }
+            }
+        }
     }
 }

@@ -10,14 +10,14 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.zenith.ecoscan.R
-import com.zenith.ecoscan.data.api.response.Item
+import com.zenith.ecoscan.data.api.response.ItemInfo
 import com.zenith.ecoscan.databinding.FragmentPreviewBinding
-import com.zenith.ecoscan.utils.overlayLoading
-import com.zenith.ecoscan.utils.uriToFile
-import java.io.File
 import com.zenith.ecoscan.utils.Result
+import com.zenith.ecoscan.utils.overlayLoading
 import com.zenith.ecoscan.utils.showToast
+import com.zenith.ecoscan.utils.uriToFile
 import dagger.hilt.android.AndroidEntryPoint
+import java.io.File
 
 @AndroidEntryPoint
 class PreviewFragment : Fragment() {
@@ -59,35 +59,36 @@ class PreviewFragment : Fragment() {
     }
 
     private fun uploadData() {
+        if (imageReady != null) {
+            previewViewModel.uploadPhoto(imageReady!!).observe(viewLifecycleOwner) { response ->
 
-        if (imageReady != null) print(true) else print(false)
+                when (response) {
+                    is Result.Loading -> overlayLoading(binding.progressOverlay, true)
 
-        previewViewModel.uploadPhoto(imageReady!!).observe(viewLifecycleOwner) { response ->
-
-            when (response) {
-                is Result.Loading -> overlayLoading(binding.progressOverlay, true)
-
-                is Result.Success -> {
-                    val item = response.data.item
-                    val dataNextScreen = Item(
-                        item.averageEnergy,
-                        item.dampakDisposal,
-                        item.dampakProduksi,
-                        item.name,
-                        item.dampakKonsumsi,
-                        item.image,
-                        item.linkSumber
-                    )
-                    findNavController().navigate(
-                        PreviewFragmentDirections.actionPreviewFragmentToDetailFragment(
-                            dataNextScreen
+                    is Result.Success -> {
+                        val item = response.data.itemInfo
+                        val dataNextScreen = ItemInfo(
+                            item?.lokasi,
+                            item?.averageEnergy,
+                            item?.dampakDisposal,
+                            item?.sumber,
+                            item?.dampakProduksi,
+                            item?.name,
+                            item?.dampakKonsumsi,
+                            item?.image,
+                            item?.recommendations
                         )
-                    )
-                }
+                        findNavController().navigate(
+                            PreviewFragmentDirections.actionPreviewFragmentToDetailFragment(
+                                dataNextScreen
+                            )
+                        )
+                    }
 
-                is Result.Error -> {
-                    showToast(requireContext(), getString(R.string.error), response.error)
-                    findNavController().navigate(PreviewFragmentDirections.actionPreviewFragmentToHomeFragment())
+                    is Result.Error -> {
+                        showToast(requireContext(), getString(R.string.error), response.error)
+                        findNavController().navigate(PreviewFragmentDirections.actionPreviewFragmentToHomeFragment())
+                    }
                 }
             }
         }

@@ -55,15 +55,6 @@
         android:label="fragment_form"
         tools:layout="@layout/fragment_form" />
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.zenith.ecoscan.screen.detail.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" >
-        <argument
-            android:name="dataItem"
-            app:argType="com.zenith.ecoscan.data.api.response.Item" />
-    </fragment>
-    <fragment
         android:id="@+id/aboutFragment"
         android:name="com.zenith.ecoscan.screen.about.AboutFragment"
         android:label="fragment_about"
@@ -76,6 +67,15 @@
         <action
             android:id="@+id/action_historyFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.zenith.ecoscan.screen.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="data"
+            app:argType="com.zenith.ecoscan.data.api.response.ItemInfo" />
     </fragment>
 
 </navigation>

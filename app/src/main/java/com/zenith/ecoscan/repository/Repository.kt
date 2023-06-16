@@ -3,7 +3,9 @@ package com.zenith.ecoscan.repository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.zenith.ecoscan.data.api.ApiService
-import com.zenith.ecoscan.data.api.response.ResponseData
+import com.zenith.ecoscan.data.api.response.CalculateResponse
+import com.zenith.ecoscan.data.api.response.DataResponse
+import com.zenith.ecoscan.data.api.response.FormResponse
 import com.zenith.ecoscan.data.local.DataDao
 import com.zenith.ecoscan.data.local.DataEntity
 import com.zenith.ecoscan.domain.IDataRepository
@@ -24,8 +26,8 @@ class Repository @Inject constructor(private val apiService: ApiService, private
     IDataRepository {
     private val executorService: ExecutorService = Executors.newSingleThreadExecutor()
 
-    override fun uploadPhoto(file: File): LiveData<Result<ResponseData>> {
-        val itemResponse = MutableLiveData<Result<ResponseData>>()
+    override fun uploadPhoto(file: File): LiveData<Result<DataResponse>> {
+        val itemResponse = MutableLiveData<Result<DataResponse>>()
         itemResponse.value = Result.Loading
         val newFile = reduceFileImage(file)
         val fileReady = newFile.asRequestBody("image/jpg".toMediaType())
@@ -34,21 +36,24 @@ class Repository @Inject constructor(private val apiService: ApiService, private
             newFile.name,
             fileReady
         )
-        apiService.uploadPhoto(multipart).enqueue(object :Callback<ResponseData> {
-            override fun onResponse(call: Call<ResponseData>, response: Response<ResponseData>) {
+        apiService.uploadPhoto(multipart).enqueue(object :Callback<DataResponse> {
+            override fun onResponse(call: Call<DataResponse>, response: Response<DataResponse>) {
                 if (response.isSuccessful) {
-                    if (response.body()?.item != null) {
-                        val item = response.body()?.item
+                    if (response.body()?.itemInfo != null) {
+                        val item = response.body()?.itemInfo
                         item?.let {
                             val dataReady = DataEntity(
                                 0,
+                                item.lokasi,
                                 item.averageEnergy.toString(),
                                 item.dampakDisposal,
                                 item.dampakProduksi,
                                 item.name,
                                 item.dampakKonsumsi,
                                 item.image,
-                                item.linkSumber
+                                item.sumber,
+                                item.recommendations,
+                                response.body()?.time
                             )
                             executorService.execute { dataDao.insertData(dataReady) }
                         }
@@ -60,7 +65,7 @@ class Repository @Inject constructor(private val apiService: ApiService, private
                 }
             }
 
-            override fun onFailure(call: Call<ResponseData>, t: Throwable) {
+            override fun onFailure(call: Call<DataResponse>, t: Throwable) {
                 itemResponse.value = Result.Error(t.message ?: "Unknown Error")
             }
 
@@ -69,4 +74,59 @@ class Repository @Inject constructor(private val apiService: ApiService, private
     }
 
     override fun getAllHistory(): LiveData<List<DataEntity>> = dataDao.getAllHistory()
+    override fun getDevicesData(location: String): LiveData<Result<FormResponse>> {
+        val formResponse = MutableLiveData<Result<FormResponse>>()
+
+        formResponse.value = Result.Loading
+
+        apiService.getDevices(location).enqueue(object : Callback<FormResponse>{
+            override fun onResponse(call: Call<FormResponse>, response: Response<FormResponse>) {
+                if (response.isSuccessful) {
+                    if (response.body()?.devices != null) {
+                        formResponse.value = Result.Success(response.body()!!)
+                    } else {
+                        formResponse.value = Result.Error("No Data")
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<FormResponse>, t: Throwable) {
+                formResponse.value = Result.Error(t.message ?: "Unknown Error")
+            }
+
+        })
+        return formResponse
+    }
+
+    override fun calculateEnergy(
+        location: String,
+        device: String,
+        device_type: String
+    ): LiveData<Result<CalculateResponse>> {
+        val energyResponse = MutableLiveData<Result<CalculateResponse>>()
+        energyResponse.value = Result.Loading
+
+        val requestBody = mapOf(
+            "location" to location,
+            "device" to device,
+            "device_type" to device_type
+        )
+
+        apiService.calculateEnergy(requestBody).enqueue(object : Callback<CalculateResponse>{
+            override fun onResponse(
+                call: Call<CalculateResponse>,
+                response: Response<CalculateResponse>
+            ) {
+                if (response.isSuccessful) {
+                    energyResponse.value = Result.Success(response.body()!!)
+                }
+            }
+
+            override fun onFailure(call: Call<CalculateResponse>, t: Throwable) {
+                energyResponse.value = Result.Error(t.message ?: "Unknown Error")
+            }
+
+        })
+        return energyResponse
+    }
 }
